@@ -106,30 +106,32 @@ export const products: Product[] = [
     suitableFor: ["書房", "聖所角落", "訂製"],
     processNotes: ["木材安定處理", "玻璃鑲嵌", "金脈紋理", "電路組裝"],
   },
-  // —— 織繕日常：初步構思 ——
+  // —— 織繕日常：第一波開賣畫面 ——
   {
     id: "gold-stitch",
     series: "W01",
     slug: "gold-stitch",
     line: "woven-mend",
-    name: "金線刺繡",
-    en: "Gold Stitch",
+    name: "金線布章",
+    en: "Gold Stitch Patch",
     tagline: "一針一線，把裂縫織回光裡。",
     description:
-      "【初步構思】以有機棉／回收布料為底，用金屬色線刺繡金繕紋樣——可以是手帕、布章、衣領點綴或小組訂製圖案。把「修補」變成可佩戴、可傳承的日常記號。",
+      "有機棉／剩布布章，金屬色線繡成金繕脈紋；可配鎖匙扣。適合婚禮回禮、小組紀念——把「修補」變成可佩戴的日常記號。",
     longDescription:
-      "構想方向：提供基礎金脈圖樣與訂製經文／名字刺繡；亦可開「可見的修補」工作坊，教人把舊衣破口繡成金線。物料優先選有機棉、剩布再利用與可降解包裝。現階段為構思，歡迎教會／品牌聯乘試做小批量。",
-    materials: "有機棉／剩布 · 金屬色繡線 · 再生襯布（構思）",
+      "畫面感覺：細小圓形布章，米白／亞麻底，金色裂紋線條低調走在布面；旁邊可掛細鎖匙扣。包裝用再生紙卡，印一句「撕裂有時，縫補有時」。可小批量機繡或手繡試產。",
+    materials: "有機棉／剩布 · 金屬色繡線 · 金屬扣環",
     faith: "傳道書 3:7 — 撕裂有時，縫補有時",
     eco: "剩布升級再造；延長衣物壽命，減少快時尚丟棄",
     category: "textile",
-    status: "concept",
-    priceHint: "構思階段 · 可談小批量試做",
-    suitableFor: ["手帕／布章", "婚禮回禮", "小組訂製", "修補工作坊"],
+    status: "preorder",
+    priceHint: "建議零售",
+    priceHkd: 88,
+    image: "/products/gold-stitch.png",
+    suitableFor: ["布章／鎖匙扣", "婚禮回禮", "小組訂製"],
     processNotes: [
       "收集剩布與有機棉樣本",
-      "設計金脈／經文刺繡圖樣",
-      "手繡或小量機繡試版",
+      "設計金脈刺繡圖樣",
+      "小量機繡／手繡試版",
       "附來源與意義短卡",
     ],
   },
@@ -142,16 +144,18 @@ export const products: Product[] = [
     en: "Sabbath Towel",
     tagline: "擦乾水跡，也擦乾忙碌。",
     description:
-      "【初步構思】有機棉或再生棉毛巾，邊角以金線刺繡細紋。用於洗手、洗臉或安息日儀式——提醒「清潔」與「安息」都是被賜的禮物，而非另一項績效。",
+      "有機棉面巾，一角以金線細繡。洗手、洗臉或安息日用——提醒清潔與安息都是禮物，不是績效。",
     longDescription:
-      "構想方向：面巾／手巾尺寸為主，低調金線沿邊或角落刺繡；可選無漂染、低水洗印染。適合家居、教會洗手間接待、退修營伴手。包裝用再生紙束帶，避免塑膠。",
-    materials: "有機／再生棉 · 金線刺繡 · 植物染選項（構思）",
+      "畫面感覺：摺好的米白面巾，角落有一條細金線如裂縫修復；燈光柔和，像退修營或家居洗手間的安靜角落。再生紙束帶包裝，無塑膠袋。",
+    materials: "有機／再生棉 · 金線刺繡",
     faith: "約翰福音 13:5 — 就拿毛巾束腰，洗門徒的腳",
     eco: "有機或再生棉；耐用可洗，減少即棄紙巾依賴",
     category: "textile",
-    status: "concept",
-    priceHint: "構思階段 · 可談樣品",
-    suitableFor: ["家居", "接待處", "退修營", "洗腳禮紀念"],
+    status: "preorder",
+    priceHint: "建議零售",
+    priceHkd: 198,
+    image: "/products/rest-towel.png",
+    suitableFor: ["家居", "接待處", "退修營"],
     processNotes: [
       "選定棉紗與織造夥伴",
       "邊角金線刺繡試版",
@@ -168,16 +172,18 @@ export const products: Product[] = [
     en: "Shelter Sleeve",
     tagline: "收起雨傘，也收起匆忙。",
     description:
-      "【初步構思】可重複使用的雨傘／遮袋，替代商場即棄膠套。布面可繡細金線或簡單經文短句，象徵「被遮蓋、被保護」——環保行動與信仰意象同行。",
+      "可重用雨傘遮袋，取代商場即棄膠套。袋口細金線，掛扣方便掛袋上——環保同「被遮蓋」的意象一齊帶走。",
     longDescription:
-      "構想方向：防水或潑水布、可折疊收納、掛扣方便掛在袋上；內層吸濕，外層可刺繡品牌金脈或「耶和華是我的盾牌」等短句（可訂製）。目標是減少即棄膠傘套，同時做成可送人的小禮物。",
-    materials: "回收／再生纖維防水布 · 金線刺繡 · 金屬掛扣（構思）",
+      "畫面感覺：深綠灰布筒，可摺細，金屬掛扣；袋口有一道金繕細線。放喺手袋旁邊影，睇得出係日常用得着、又唔似即棄膠套。",
+    materials: "再生纖維防水布 · 金線刺繡 · 金屬掛扣",
     faith: "詩篇 91:4 — 祂必用自己的翎毛遮蔽你",
     eco: "取代即棄膠傘套；可洗可重用，減少塑膠",
     category: "textile",
-    status: "concept",
-    priceHint: "構思階段 · 可談試產",
-    suitableFor: ["日常通勤", "教會／活動派發", "企業禮品", "婚禮賓客"],
+    status: "preorder",
+    priceHint: "建議零售",
+    priceHkd: 148,
+    image: "/products/shelter-sleeve.png",
+    suitableFor: ["日常通勤", "教會派發", "婚禮賓客"],
     processNotes: [
       "防水布與車縫結構試版",
       "吸濕內層與掛扣設計",
@@ -186,6 +192,10 @@ export const products: Product[] = [
     ],
   },
 ];
+
+export function getShopPreviewProducts(): Product[] {
+  return products.filter((product) => typeof product.priceHkd === "number");
+}
 
 export const pillars: BeliefPillar[] = [
   {

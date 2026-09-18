@@ -13,6 +13,7 @@ export const siteConfig: SiteConfig = {
 export const mainNav: NavItem[] = [
   { href: "/belief", label: "信念" },
   { href: "/series", label: "系列" },
+  { href: "/shop", label: "開賣預覽" },
   { href: "/process", label: "工藝" },
   { href: "/contact", label: "預約系列冊", accent: true },
 ];
@@ -20,6 +21,7 @@ export const mainNav: NavItem[] = [
 export const footerNav: NavItem[] = [
   { href: "/belief", label: "信念" },
   { href: "/series", label: "金線系列" },
+  { href: "/shop", label: "開賣預覽" },
   { href: "/process", label: "從碎裂到金線" },
   { href: "/contact", label: "聯絡繕物誌" },
 ];

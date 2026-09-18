@@ -43,6 +43,9 @@ export interface Product {
   category: ProductCategory;
   status: ProductStatus;
   priceHint: string;
+  /** 建議零售價（港幣），有畫面／開賣預覽用 */
+  priceHkd?: number;
+  image?: string;
   suitableFor: string[];
   processNotes: string[];
 }
