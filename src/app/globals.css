@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+:root {
+  --pine: #1a2e24;
+  --pine-deep: #0f1c16;
+  --moss: #3d5a45;
+  --sage: #8fa892;
+  --mist: #e2ebe4;
+  --linen: #f3f6f2;
+  --clay: #2a2622;
+  --gold: #b8943d;
+  --gold-soft: #d4b56a;
+  --gold-bright: #e8d090;
+  --ash: #5c564c;
+  --background: var(--linen);
+  --foreground: var(--clay);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-pine: var(--pine);
+  --color-pine-deep: var(--pine-deep);
+  --color-moss: var(--moss);
+  --color-sage: var(--sage);
+  --color-mist: var(--mist);
+  --color-linen: var(--linen);
+  --color-clay: var(--clay);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-bright: var(--gold-bright);
+  --color-ash: var(--ash);
+  --font-display: var(--font-noto-serif-tc);
+  --font-latin: var(--font-cormorant);
+  --font-body: var(--font-noto-sans-tc);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Noto Sans TC", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 35%, transparent);
+  color: var(--pine-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 50;
+  background: var(--pine);
+  color: var(--linen);
+  padding: 0.5rem 0.85rem;
+  font-size: 0.875rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@keyframes vein-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-rise {
+  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-rise-delay-1 {
+  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.animate-rise-delay-2 {
+  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.animate-rise-delay-3 {
+  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+.animate-drift {
+  animation: drift 7s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: soft-glow 5s ease-in-out infinite;
+}
+
+.vein-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: vein-draw 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-rise-delay-1,
+  .animate-rise-delay-2,
+  .animate-rise-delay-3,
+  .animate-drift,
+  .animate-glow,
+  .vein-path {
+    animation: none !important;
+  }
+
+  .vein-path {
+    stroke-dashoffset: 0;
+  }
+}
+
+.grain {
+  background-image:
+    radial-gradient(
+      ellipse 120% 80% at 70% 20%,
+      color-mix(in srgb, var(--gold-soft) 18%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 90% 70% at 15% 85%,
+      color-mix(in srgb, var(--moss) 22%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(165deg, var(--pine-deep) 0%, var(--pine) 42%, #243f32 100%);
+}
+
+.section-wash {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--mist) 70%, white) 0%,
+    var(--linen) 100%
+  );
+}
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
