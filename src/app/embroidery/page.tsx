@@ -20,14 +20,26 @@ export default function EmbroideryPage() {
       <Section className="bg-linen pt-16 md:pt-20">
         <Container>
           <PageHeader
-            eyebrow="Embroidery"
-            title="金線刺繡"
-            description="用針線做金繕：裂縫唔使遮醜，可以繡成光。由細布章到舊衣修補，都係「撕裂有時，縫補有時」。"
+            eyebrow="Embroidery · Faith"
+            title="可賣的信仰刺繡"
+            description="唔賣大聲口號——賣可觸摸的記號：金繕脈紋＋經文故事。由 HK$58 口袋片到擘餅布巾，適合個人、小組、教會訂製。"
           />
 
-          <div className="mt-10 max-w-2xl text-sm leading-7 text-ash">
+          <div className="mt-10 grid gap-6 md:grid-cols-3 max-w-4xl text-sm leading-7 text-ash">
             <p>
-              刺繡係最易起步開賣嘅線：物料輕、好寄、好影、好做回禮。下面四件——由細到大、由現貨感去到服務制。
+              <span className="font-display text-pine">小禮物</span>
+              <br />
+              芥菜種口袋片、金線書籤——平、輕、好送。
+            </p>
+            <p>
+              <span className="font-display text-pine">日常隨身</span>
+              <br />
+              布章、手帕——信仰故事帶出街。
+            </p>
+            <p>
+              <span className="font-display text-pine">群體／服事</span>
+              <br />
+              刺繡盒、擘餅布、舊衣金繕繡。
             </p>
           </div>
 

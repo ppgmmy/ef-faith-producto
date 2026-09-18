@@ -11,7 +11,10 @@ export type ProductId =
   | "shelter-sleeve"
   | "gold-kerchief"
   | "stitch-kit"
-  | "visible-mend";
+  | "visible-mend"
+  | "word-bookmark"
+  | "mustard-token"
+  | "table-linen";
 
 export type ProductStatus =
   | "available"
