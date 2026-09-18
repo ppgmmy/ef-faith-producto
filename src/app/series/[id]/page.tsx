@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/layout/SiteShell";
@@ -53,8 +54,20 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <p className="font-latin text-sm tracking-[0.22em] text-gold-soft uppercase">
             {lineLabels[product.line]} · {product.series}
           </p>
-          <div className="mt-6 grid gap-12 md:grid-cols-[1.2fr_0.8fr]">
+          <div className="mt-6 grid gap-12 md:grid-cols-[1.05fr_1fr]">
             <div>
+              {product.image ? (
+                <div className="relative mb-6 aspect-square overflow-hidden bg-pine">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+              ) : null}
               <p className="font-latin text-sm italic text-sage">{product.en}</p>
               <h1 className="mt-2 font-display text-4xl tracking-wide md:text-5xl">
                 {product.name}
@@ -72,13 +85,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               </p>
               <p className="mt-6 text-sm text-sage">
                 {statusLabel[product.status]} · {product.priceHint}
+                {product.priceHkd ? ` · HK$${product.priceHkd}` : ""}
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href="/contact" variant="gold">
-                  {isConcept ? "查詢試做" : "查詢此產品"}
+                  {isConcept ? "查詢試做" : "查詢／預購"}
                 </Button>
-                <Button href="/series" variant="ghost">
-                  返回系列
+                <Button href="/shop" variant="ghost">
+                  看開賣預覽
                 </Button>
               </div>
             </div>
