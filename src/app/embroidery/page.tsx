@@ -4,27 +4,34 @@ import Link from "next/link";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Button } from "@/components/ui/Button";
 import { Container, PageHeader, Section } from "@/components/ui/Section";
-import { getShopPreviewProducts } from "@/data/catalog";
+import { getEmbroideryProducts } from "@/data/catalog";
 
 export const metadata: Metadata = {
-  title: "開賣預覽",
-  description: "繕物誌第一波產品畫面：金線布章、遮袋、安息巾——附建議售價。",
+  title: "金線刺繡",
+  description:
+    "繕物誌刺繡系列：金線布章、金繕手帕、可見修補刺繡盒、舊衣金繕繡。",
 };
 
-export default function ShopPreviewPage() {
-  const items = getShopPreviewProducts();
+export default function EmbroideryPage() {
+  const items = getEmbroideryProducts();
 
   return (
     <SiteShell>
       <Section className="bg-linen pt-16 md:pt-20">
         <Container>
           <PageHeader
-            eyebrow="Shop Preview"
-            title="如果開始賣，會長咁"
-            description="刺繡線優先：布章、手帕、刺繡盒、舊衣金繕繡；另有安息巾同遮袋。而家係畫面預覽，未接真實結帳。"
+            eyebrow="Embroidery"
+            title="金線刺繡"
+            description="用針線做金繕：裂縫唔使遮醜，可以繡成光。由細布章到舊衣修補，都係「撕裂有時，縫補有時」。"
           />
 
-          <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 max-w-2xl text-sm leading-7 text-ash">
+            <p>
+              刺繡係最易起步開賣嘅線：物料輕、好寄、好影、好做回禮。下面四件——由細到大、由現貨感去到服務制。
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-10 sm:grid-cols-2">
             {items.map((product) => (
               <article key={product.id} className="flex flex-col">
                 <Link
@@ -37,14 +44,14 @@ export default function ShopPreviewPage() {
                       alt={product.name}
                       fill
                       className="object-cover transition duration-500 hover:scale-[1.02]"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       priority
                     />
                   ) : null}
                 </Link>
                 <div className="mt-5 flex flex-1 flex-col">
                   <p className="font-latin text-xs tracking-[0.2em] text-gold uppercase">
-                    {product.en}
+                    {product.series} · {product.en}
                   </p>
                   <h2 className="mt-1 font-display text-2xl tracking-wide text-pine">
                     <Link
@@ -61,36 +68,32 @@ export default function ShopPreviewPage() {
                     {product.description}
                   </p>
                   <div className="mt-5 flex items-end justify-between border-t border-sage/30 pt-4">
-                    <div>
-                      <p className="text-xs tracking-widest text-ash/70 uppercase">
-                        建議售價
-                      </p>
-                      <p className="mt-1 font-display text-2xl text-pine">
-                        HK${product.priceHkd}
-                      </p>
-                    </div>
-                    <span className="text-xs text-moss">預購畫面</span>
+                    <p className="font-display text-2xl text-pine">
+                      {product.priceHkd
+                        ? product.id === "visible-mend"
+                          ? `由 HK$${product.priceHkd}`
+                          : `HK$${product.priceHkd}`
+                        : product.priceHint}
+                    </p>
+                    <Link
+                      href={`/series/${product.slug}`}
+                      className="text-sm text-moss hover:text-pine"
+                    >
+                      詳情 →
+                    </Link>
                   </div>
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="mt-16 max-w-2xl border border-sage/30 bg-mist/40 p-6 md:p-8">
-            <h3 className="font-display text-xl text-pine">你而家睇到嘅係</h3>
-            <ul className="mt-4 space-y-2 text-sm leading-7 text-ash">
-              <li>· 三件「第一波」貨：布章、遮袋、安息巾</li>
-              <li>· 每件有相片＋一句故事＋建議價錢</li>
-              <li>· 未有真實付款掣（避免未備貨就收錢）</li>
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <Button href="/contact" variant="primary">
-                想正式開賣／落單試產
-              </Button>
-              <Button href="/series" variant="secondary">
-                返系列總覽
-              </Button>
-            </div>
+          <div className="mt-16 flex flex-wrap gap-4">
+            <Button href="/contact" variant="primary">
+              想試產／訂製刺繡
+            </Button>
+            <Button href="/shop" variant="secondary">
+              睇全部開賣預覽
+            </Button>
           </div>
         </Container>
       </Section>

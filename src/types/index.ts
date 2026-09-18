@@ -8,7 +8,10 @@ export type ProductId =
   | "light-vessel"
   | "gold-stitch"
   | "rest-towel"
-  | "shelter-sleeve";
+  | "shelter-sleeve"
+  | "gold-kerchief"
+  | "stitch-kit"
+  | "visible-mend";
 
 export type ProductStatus =
   | "available"
@@ -23,9 +26,10 @@ export type ProductCategory =
   | "ritual"
   | "kit"
   | "light"
-  | "textile";
+  | "textile"
+  | "embroidery";
 
-export type ProductLine = "gold-vein" | "woven-mend";
+export type ProductLine = "gold-vein" | "woven-mend" | "embroidery";
 
 export interface Product {
   id: ProductId;

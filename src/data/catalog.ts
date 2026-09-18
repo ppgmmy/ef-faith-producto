@@ -106,35 +106,100 @@ export const products: Product[] = [
     suitableFor: ["書房", "聖所角落", "訂製"],
     processNotes: ["木材安定處理", "玻璃鑲嵌", "金脈紋理", "電路組裝"],
   },
-  // —— 織繕日常：第一波開賣畫面 ——
+  // —— 金線刺繡系列 ——
   {
     id: "gold-stitch",
-    series: "W01",
+    series: "E01",
     slug: "gold-stitch",
-    line: "woven-mend",
+    line: "embroidery",
     name: "金線布章",
     en: "Gold Stitch Patch",
     tagline: "一針一線，把裂縫織回光裡。",
     description:
-      "有機棉／剩布布章，金屬色線繡成金繕脈紋；可配鎖匙扣。適合婚禮回禮、小組紀念——把「修補」變成可佩戴的日常記號。",
+      "有機棉／剩布布章，金屬色線繡成金繕脈紋；可配鎖匙扣。婚禮回禮、小組紀念——把「修補」變成可佩戴的記號。",
     longDescription:
-      "畫面感覺：細小圓形布章，米白／亞麻底，金色裂紋線條低調走在布面；旁邊可掛細鎖匙扣。包裝用再生紙卡，印一句「撕裂有時，縫補有時」。可小批量機繡或手繡試產。",
+      "細小圓形布章，米白／亞麻底，金色裂紋低調走在布面；可配鎖匙扣。包裝再生紙卡，印「撕裂有時，縫補有時」。可機繡或手繡小批量。",
     materials: "有機棉／剩布 · 金屬色繡線 · 金屬扣環",
     faith: "傳道書 3:7 — 撕裂有時，縫補有時",
-    eco: "剩布升級再造；延長衣物壽命，減少快時尚丟棄",
-    category: "textile",
+    eco: "剩布升級再造；延長衣物壽命",
+    category: "embroidery",
     status: "preorder",
     priceHint: "建議零售",
     priceHkd: 88,
     image: "/products/gold-stitch.png",
     suitableFor: ["布章／鎖匙扣", "婚禮回禮", "小組訂製"],
-    processNotes: [
-      "收集剩布與有機棉樣本",
-      "設計金脈刺繡圖樣",
-      "小量機繡／手繡試版",
-      "附來源與意義短卡",
-    ],
+    processNotes: ["選布", "金脈圖樣", "繡製試版", "附意義短卡"],
   },
+  {
+    id: "gold-kerchief",
+    series: "E02",
+    slug: "gold-kerchief",
+    line: "embroidery",
+    name: "金繕手帕",
+    en: "Kintsugi Kerchief",
+    tagline: "擦去眼淚，也留下光。",
+    description:
+      "亞麻／有機棉手帕，一角金繕脈紋細繡。可隨身、可送人——安靜、實用，又帶著被修好的故事。",
+    longDescription:
+      "畫面：米白手帕摺好，角落金色裂紋線；可選極淡十字針腳（低調）。適合關懷探訪、婚禮手信、個人靈修伴手。可水洗，金線選色牢度高的繡線。",
+    materials: "亞麻／有機棉 · 金屬色繡線",
+    faith: "啟示錄 21:4 — 神要擦去他們一切的眼淚",
+    eco: "可重用布手帕，減少即棄紙巾",
+    category: "embroidery",
+    status: "preorder",
+    priceHint: "建議零售",
+    priceHkd: 128,
+    image: "/products/gold-kerchief.png",
+    suitableFor: ["日常隨身", "關懷禮物", "婚禮手信"],
+    processNotes: ["裁切手帕", "角位刺繡", "鎖邊", "紙套包裝"],
+  },
+  {
+    id: "stitch-kit",
+    series: "E03",
+    slug: "stitch-kit",
+    line: "embroidery",
+    name: "可見修補刺繡盒",
+    en: "Visible Mend Kit",
+    tagline: "自己繡一道金線。",
+    description:
+      "家用刺繡修補盒：竹繡棚、金／綠繡線、針、剩布練習片、步驟卡＋短默想。適合親子、小組——親手把裂縫繡成光。",
+    longDescription:
+      "畫面：竹圈、金線軸、練習布上已起針的金繕紋。教人用「可見的修補」延長舊衣壽命，而不是丟掉。可加開 90 分鐘工作坊。",
+    materials: "竹繡棚 · 繡線 · 針 · 有機棉練習布 · 再生紙說明卡",
+    faith: "哥林多後書 5:17 — 若有人在基督裡，他就是新造的人",
+    eco: "教人修衣而非棄衣，從源頭減廢",
+    category: "embroidery",
+    status: "workshop",
+    priceHint: "建議零售",
+    priceHkd: 248,
+    image: "/products/stitch-kit.png",
+    suitableFor: ["親子", "小組", "工作坊"],
+    processNotes: ["備料分裝", "教學卡", "默想短文", "工作坊流程"],
+  },
+  {
+    id: "visible-mend",
+    series: "E04",
+    slug: "visible-mend",
+    line: "embroidery",
+    name: "舊衣金繕繡",
+    en: "Visible Mend Service",
+    tagline: "你的破口，我們繡成金線。",
+    description:
+      "寄／送一件舊衣或布物，我們用金繕風格刺繡修補撕裂處。每件獨一無二，附修復短誌。",
+    longDescription:
+      "畫面：深色布上金色修補針腳，像陶瓷金繕。服務制：先相片評估，再報價繡製。適合有故事的舊物、團契 T-shirt、寶貝外套。",
+    materials: "客衣／客布 · 金屬色繡線 · 加固襯布",
+    faith: "詩篇 147:3 — 他醫好傷心的人，裹好他們的傷處",
+    eco: "延長衣物壽命，拒絕快時尚丟棄",
+    category: "embroidery",
+    status: "preorder",
+    priceHint: "由破損程度報價",
+    priceHkd: 280,
+    image: "/products/visible-mend.png",
+    suitableFor: ["舊衣修復", "紀念衣物", "訂製關懷"],
+    processNotes: ["相片評估", "加固與刺繡", "拍照誌記", "寄回"],
+  },
+  // —— 織繕日常（毛巾／遮袋）——
   {
     id: "rest-towel",
     series: "W02",
@@ -195,6 +260,10 @@ export const products: Product[] = [
 
 export function getShopPreviewProducts(): Product[] {
   return products.filter((product) => typeof product.priceHkd === "number");
+}
+
+export function getEmbroideryProducts(): Product[] {
+  return products.filter((product) => product.line === "embroidery");
 }
 
 export const pillars: BeliefPillar[] = [
