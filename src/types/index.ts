@@ -16,7 +16,10 @@ export type ProductId =
   | "mustard-token"
   | "table-linen"
   | "bible-sleeve"
-  | "hoop-wall";
+  | "hoop-wall"
+  | "motif-pack"
+  | "motif-cross"
+  | "motif-dove";
 
 export type ProductStatus =
   | "available"
