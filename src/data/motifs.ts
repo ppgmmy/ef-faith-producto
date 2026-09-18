@@ -1,4 +1,4 @@
-/** 公仔風信仰圖騰 — 主賣點；金繕裂紋只係可選概念簽名 */
+/** 刺繡圖騰庫 — 信仰公仔為主賣；另有進階故事／花草針法線 */
 
 export type MotifId =
   | "cross"
@@ -14,9 +14,13 @@ export type MotifId =
   | "loaves-fish"
   | "manger-star"
   | "mustard-tree"
-  | "lilies-cross";
+  | "lilies-cross"
+  | "sunflower"
+  | "wild-rose"
+  | "blue-flowers";
 
-export type MotifTier = "simple" | "pattern";
+/** simple=單個公仔；pattern=故事場景；botanical=花草針法（長短針／緞面針） */
+export type MotifTier = "simple" | "pattern" | "botanical";
 
 export interface EmbroideryMotif {
   id: MotifId;
@@ -27,6 +31,7 @@ export interface EmbroideryMotif {
   bestOn: string[];
   priceAddonHkd: number;
   tier: MotifTier;
+  stitchHint?: string;
   image?: string;
 }
 
@@ -185,6 +190,42 @@ export const embroideryMotifs: EmbroideryMotif[] = [
     tier: "pattern",
     image: "/products/motif-lilies-cross.png",
   },
+  {
+    id: "sunflower",
+    name: "向日葵",
+    en: "Sunflower",
+    vibe: "長短針層次花瓣＋深啡花心——飽滿、好影、好練手",
+    faith: "馬太福音 5:14 — 你們是世上的光",
+    bestOn: ["繡棚", "練習布／課程", "手提袋", "壁飾"],
+    priceAddonHkd: 90,
+    tier: "botanical",
+    stitchHint: "long & short stitch",
+    image: "/products/motif-sunflower.png",
+  },
+  {
+    id: "wild-rose",
+    name: "野玫瑰",
+    en: "Wild Rose",
+    vibe: "長短針紅瓣＋結粒花心＋銀灰葉——經典花草課感覺",
+    faith: "雅歌 2:1 — 我是沙崙的玫瑰花",
+    bestOn: ["繡棚", "手帕", "關懷禮物", "課程教材"],
+    priceAddonHkd: 85,
+    tier: "botanical",
+    stitchHint: "long & short stitch",
+    image: "/products/motif-wild-rose.png",
+  },
+  {
+    id: "blue-flowers",
+    name: "青色小花",
+    en: "Blue Blossoms",
+    vibe: "緞面針小青花＋褐枝——清爽 zakka 風，適合日常布品",
+    faith: "馬太福音 6:28 — 野地裡的花",
+    bestOn: ["杯套", "手帕", "圍裙角", "書籤"],
+    priceAddonHkd: 55,
+    tier: "botanical",
+    stitchHint: "satin stitch",
+    image: "/products/motif-blue-flowers.png",
+  },
 ];
 
 export function getSimpleMotifs(): EmbroideryMotif[] {
@@ -193,6 +234,10 @@ export function getSimpleMotifs(): EmbroideryMotif[] {
 
 export function getPatternMotifs(): EmbroideryMotif[] {
   return embroideryMotifs.filter((m) => m.tier === "pattern");
+}
+
+export function getBotanicalMotifs(): EmbroideryMotif[] {
+  return embroideryMotifs.filter((m) => m.tier === "botanical");
 }
 
 /** 公仔繡喺實物上面嘅示範組合 */
@@ -231,5 +276,12 @@ export const motifOnProducts = [
     caption: "進階故事 pattern：一籃供應，掛牆都有畫面。",
     image: "/products/motif-hoop-loaves.png",
     href: "/series/motif-hoop-loaves",
+  },
+  {
+    id: "on-cup-sleeve",
+    title: "線條繡喺外帶杯套",
+    caption: "極簡咖啡杯套——日常外帶都帶住一針手作。",
+    image: "/products/product-cup-sleeve.png",
+    href: "/series/cup-sleeve",
   },
 ] as const;

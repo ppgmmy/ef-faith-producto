@@ -7,22 +7,20 @@ import { Button } from "@/components/ui/Button";
 import { Container, PageHeader, Section } from "@/components/ui/Section";
 import { getEmbroideryProducts } from "@/data/catalog";
 import {
+  getBotanicalMotifs,
   getPatternMotifs,
   getSimpleMotifs,
   motifOnProducts,
+  type EmbroideryMotif,
 } from "@/data/motifs";
 
 export const metadata: Metadata = {
-  title: "信仰公仔刺繡｜主賣圖騰",
+  title: "信仰公仔刺繡｜花草針法 · 生活小物",
   description:
-    "十字架、白鴿、彩虹、小聖經——可愛公仔係主賣點；另有進階故事 pattern。金繕裂紋只係概念靈感，可選唔必要。",
+    "主賣可愛信仰公仔圖騰；另有進階故事 pattern、花草長短針／緞面針、外帶杯套與飲品 icon——金繕裂紋可選。",
 };
 
-function MotifGrid({
-  motifs,
-}: {
-  motifs: ReturnType<typeof getSimpleMotifs>;
-}) {
+function MotifGrid({ motifs }: { motifs: EmbroideryMotif[] }) {
   return (
     <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {motifs.map((motif) => (
@@ -43,13 +41,18 @@ function MotifGrid({
           ) : null}
           <div className="flex items-baseline justify-between gap-2">
             <h3 className="font-display text-lg text-pine">{motif.name}</h3>
-            {motif.tier === "pattern" ? (
+            {motif.tier !== "simple" ? (
               <span className="shrink-0 text-[10px] tracking-widest text-gold uppercase">
-                Pattern
+                {motif.tier === "botanical" ? "Botanical" : "Pattern"}
               </span>
             ) : null}
           </div>
           <p className="mt-1 font-latin text-xs italic text-gold">{motif.en}</p>
+          {motif.stitchHint ? (
+            <p className="mt-1 font-latin text-[11px] tracking-wide text-moss uppercase">
+              {motif.stitchHint}
+            </p>
+          ) : null}
           <p className="mt-2 text-sm leading-6 text-ash">{motif.vibe}</p>
           <p className="mt-3 text-xs text-moss">{motif.faith}</p>
           <p className="mt-2 text-xs text-ash/80">
@@ -66,10 +69,21 @@ function MotifGrid({
 
 export default function EmbroideryPage() {
   const items = getEmbroideryProducts();
-  const motifProducts = items.filter((p) => p.id.startsWith("motif"));
-  const otherProducts = items.filter((p) => !p.id.startsWith("motif"));
+  const motifProducts = items.filter(
+    (p) =>
+      p.id.startsWith("motif") ||
+      p.id === "cup-sleeve" ||
+      p.id === "drink-motif-pack",
+  );
+  const otherProducts = items.filter(
+    (p) =>
+      !p.id.startsWith("motif") &&
+      p.id !== "cup-sleeve" &&
+      p.id !== "drink-motif-pack",
+  );
   const simpleMotifs = getSimpleMotifs();
   const patternMotifs = getPatternMotifs();
+  const botanicalMotifs = getBotanicalMotifs();
 
   return (
     <SiteShell>
@@ -78,7 +92,7 @@ export default function EmbroideryPage() {
           <PageHeader
             eyebrow="Main Sell · Cute Motifs"
             title="信仰公仔刺繡"
-            description="主賣點係上面繡嘅得意公仔同故事 pattern：十字架、白鴿、彩虹、小聖經，以至方舟、牧人等較密線款。金繕裂紋只係品牌概念靈感——可加可不加，唔係產品必要。"
+            description="主賣點係得意公仔同故事 pattern。另外花草針法（向日葵／野玫瑰／小青花）、外帶杯套、飲品 icon 都好啱生活線同聯乘——金繕裂紋可選、唔係必須。"
           />
 
           <div className="relative mt-12 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
@@ -97,7 +111,7 @@ export default function EmbroideryPage() {
               繡喺產品上面
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              公仔可以直接繡喺 tote、手帕角、小袋、繡棚壁飾，甚至你寄嚟嘅舊衣上面——圖騰先係主角。
+              公仔、花草、線條都可以繡喺 tote、手帕、繡棚、杯套，甚至舊衣上面。
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               {motifOnProducts.map((item) => (
@@ -141,7 +155,7 @@ export default function EmbroideryPage() {
               進階故事 Pattern
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              線密少少、場景感強：橄欖圈、方舟、開卷聖經、牧人、五餅二魚、馬槽與星、芥菜樹、百合十字——適合繡棚同袋面大圖。
+              線密少少、場景感強——適合繡棚同袋面大圖。
             </p>
             <div className="relative mt-8 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
               <Image
@@ -157,7 +171,62 @@ export default function EmbroideryPage() {
 
           <div className="mt-20">
             <h2 className="font-display text-2xl text-pine md:text-3xl">
-              公仔圖騰產品
+              花草針法 Botanical
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
+              長短針向日葵／野玫瑰、緞面針青色小花——經典課感覺，適合教材、繡棚、手作體驗。
+            </p>
+            <MotifGrid motifs={botanicalMotifs} />
+          </div>
+
+          <div className="mt-20">
+            <h2 className="font-display text-2xl text-pine md:text-3xl">
+              生活小物 · 聯乘
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
+              外帶杯套同咖啡廳飲品 icon——日常用得着，又啱咖啡店／市集聯乘。
+            </p>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              <Link href="/series/cup-sleeve" className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden bg-mist">
+                  <Image
+                    src="/products/product-cup-sleeve.png"
+                    alt="極簡外帶杯套"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <h3 className="mt-4 font-display text-xl text-pine">
+                  極簡外帶杯套
+                </h3>
+                <p className="mt-2 text-sm text-ash">
+                  線條繡 · 可重用 · 由 HK$98
+                </p>
+              </Link>
+              <Link href="/series/drink-motif-pack" className="group block">
+                <div className="relative aspect-[4/3] overflow-hidden bg-mist">
+                  <Image
+                    src="/products/motifs-drink-set.png"
+                    alt="咖啡廳飲品圖騰組"
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <h3 className="mt-4 font-display text-xl text-pine">
+                  咖啡廳飲品圖騰組
+                </h3>
+                <p className="mt-2 text-sm text-ash">
+                  刺繡版熱門飲品 icon · HK$320
+                </p>
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-20">
+            <h2 className="font-display text-2xl text-pine md:text-3xl">
+              圖騰產品
             </h2>
             <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {motifProducts.map((product) => (
@@ -194,9 +263,6 @@ export default function EmbroideryPage() {
             <h2 className="font-display text-2xl text-pine md:text-3xl">
               其他刺繡載體
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              布章、手帕、書籤、聖經套等——一樣以公仔圖騰為主視覺。
-            </p>
             <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {otherProducts.map((product) => (
                 <article key={product.id}>
@@ -236,7 +302,7 @@ export default function EmbroideryPage() {
 
           <div className="mt-12 flex flex-wrap gap-4">
             <Button href="/contact" variant="primary">
-              想訂公仔圖騰／試產
+              想訂圖騰／杯套／聯乘
             </Button>
             <Button href="/shop" variant="secondary">
               開賣預覽

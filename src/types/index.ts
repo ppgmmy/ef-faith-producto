@@ -26,7 +26,10 @@ export type ProductId =
   | "motif-rainbow"
   | "motif-pattern-pack"
   | "motif-pattern-pack-2"
-  | "motif-hoop-loaves";
+  | "motif-hoop-loaves"
+  | "motif-botanical-pack"
+  | "cup-sleeve"
+  | "drink-motif-pack";
 
 export type ProductStatus =
   | "available"
