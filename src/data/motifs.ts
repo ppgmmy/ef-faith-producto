@@ -1,4 +1,4 @@
-/** 刺繡圖騰庫 — 信仰公仔為主賣；另有進階故事／花草針法線 */
+/** 刺繡圖騰庫 — 全部公仔以刺繡針法製作，維持可愛畫風；金繕裂紋可選 */
 
 export type MotifId =
   | "cross"
@@ -40,7 +40,7 @@ export const embroideryMotifs: EmbroideryMotif[] = [
     id: "cross",
     name: "圓角十字架公仔",
     en: "Soft Cross",
-    vibe: "圓潤、溫柔，似布偶多過似教會標誌",
+    vibe: "圓潤可愛；緞面針填色＋結粒五官——全部係刺繡，唔係布貼",
     faith: "約翰福音 3:16 — 神愛世人",
     bestOn: ["布章", "鎖匙扣", "Tote 袋角", "外套胸口"],
     priceAddonHkd: 0,

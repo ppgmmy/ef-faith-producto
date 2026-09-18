@@ -160,11 +160,11 @@ export const products: Product[] = [
     line: "embroidery",
     name: "公仔圖騰刺繡盒",
     en: "Motif Stitch Kit",
-    tagline: "自己繡一個信仰公仔。",
+    tagline: "自己繡一個信仰公仔——全部用針線。",
     description:
-      "靈修 DIY 刺繡盒：竹棚、彩線、練習布、針、7 日短默想卡——主題係繡十字架／白鴿等公仔圖騰。金繕只係概念故事，唔綁死裂紋圖案。",
+      "靈修 DIY 刺繡盒：竹棚、彩線、練習布、針、步驟卡——主題係用緞面針／結粒繡十字架、白鴿等公仔。畫風保持圓潤可愛，製作方式一律刺繡。可加開工作坊。",
     longDescription:
-      "對齊市場上手作靈修包定價帶（約 HK$260）。主練習公仔圖騰；可加開 90 分鐘工作坊。",
+      "對齊市場上手作靈修包。主練習公仔刺繡；完整教學見／embroidery/lessons。",
     materials: "竹繡棚 · 繡線 · 針 · 有機棉練習布 · 再生紙默想卡",
     faith: "哥林多後書 5:17 — 若有人在基督裡，他就是新造的人",
     eco: "教人修衣而非棄衣，從源頭減廢",
@@ -612,6 +612,29 @@ export const products: Product[] = [
     image: "/products/motifs-drink-set.png",
     suitableFor: ["咖啡店聯乘", "市集", "菜單牆", "杯套"],
     processNotes: ["飲品 icon 圖稿", "成套打版", "聯乘選項", "包裝"],
+  },
+  {
+    id: "lesson-kit",
+    series: "E23",
+    slug: "lesson-kit",
+    line: "embroidery",
+    name: "公仔刺繡教學盒",
+    en: "Buddy Stitch Lesson Kit",
+    tagline: "學繡公仔——畫風得意，針腳先係真身。",
+    description:
+      "教學盒：竹棚、彩線、針、練習布、8 課步驟卡（十字架／白鴿／彩虹等入門＋向日葵花草課）。所有公仔都以刺繡針法製作，維持可愛畫風。適合親子、小組、手作課。",
+    longDescription:
+      "對齊刺繡課教材形式（lesson + stitch name）。網上有完整教學頁；盒內實體步驟卡方便離線練習。可加開工作坊。",
+    materials: "竹繡棚 · 繡線 · 針 · 有機棉練習布 · 8 課再生紙步驟卡",
+    faith: "一手一針，把故事繡進日常",
+    eco: "可重用棚同線；步驟卡再生紙",
+    category: "embroidery",
+    status: "workshop",
+    priceHint: "建議零售",
+    priceHkd: 298,
+    image: "/products/lessons-hero.png",
+    suitableFor: ["親子", "小組", "手作課", "初學"],
+    processNotes: ["備料", "步驟卡對齊網上課", "分裝", "工作坊流程"],
   },
   // —— 織繕日常（毛巾／遮袋）——
   {

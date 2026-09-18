@@ -13,6 +13,7 @@ export const siteConfig: SiteConfig = {
 export const mainNav: NavItem[] = [
   { href: "/belief", label: "信念" },
   { href: "/embroidery", label: "刺繡" },
+  { href: "/embroidery/lessons", label: "教學" },
   { href: "/series", label: "系列" },
   { href: "/shop", label: "開賣預覽" },
   { href: "/contact", label: "預約系列冊", accent: true },
@@ -21,6 +22,7 @@ export const mainNav: NavItem[] = [
 export const footerNav: NavItem[] = [
   { href: "/belief", label: "信念" },
   { href: "/embroidery", label: "公仔刺繡" },
+  { href: "/embroidery/lessons", label: "刺繡教學" },
   { href: "/series", label: "產品系列" },
   { href: "/shop", label: "開賣預覽" },
   { href: "/contact", label: "聯絡繕物誌" },

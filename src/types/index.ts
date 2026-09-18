@@ -29,7 +29,8 @@ export type ProductId =
   | "motif-hoop-loaves"
   | "motif-botanical-pack"
   | "cup-sleeve"
-  | "drink-motif-pack";
+  | "drink-motif-pack"
+  | "lesson-kit";
 
 export type ProductStatus =
   | "available"

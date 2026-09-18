@@ -15,9 +15,9 @@ import {
 } from "@/data/motifs";
 
 export const metadata: Metadata = {
-  title: "信仰公仔刺繡｜花草針法 · 生活小物",
+  title: "信仰公仔刺繡｜針線製作 · 附教學",
   description:
-    "主賣可愛信仰公仔圖騰；另有進階故事 pattern、花草長短針／緞面針、外帶杯套與飲品 icon——金繕裂紋可選。",
+    "所有公仔以刺繡針法製作，維持可愛畫風；附入門至花草課教學。金繕裂紋可選。",
 };
 
 function MotifGrid({ motifs }: { motifs: EmbroideryMotif[] }) {
@@ -90,9 +90,9 @@ export default function EmbroideryPage() {
       <Section className="bg-linen pt-16 md:pt-20">
         <Container>
           <PageHeader
-            eyebrow="Main Sell · Cute Motifs"
+            eyebrow="Embroidered Buddies · Tutorials"
             title="信仰公仔刺繡"
-            description="主賣點係得意公仔同故事 pattern。另外花草針法（向日葵／野玫瑰／小青花）、外帶杯套、飲品 icon 都好啱生活線同聯乘——金繕裂紋可選、唔係必須。"
+            description="所有公仔都用刺繡形式製作——畫風一樣圓潤得意，但係緞面針、結粒、梗針繡出嚟，唔係布貼。另有故事 pattern、花草針法、杯套聯乘；金繕裂紋可選。"
           />
 
           <div className="relative mt-12 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
@@ -142,10 +142,10 @@ export default function EmbroideryPage() {
 
           <div className="mt-20">
             <h2 className="font-display text-2xl text-pine md:text-3xl">
-              基本公仔圖騰
+              基本公仔圖騰（刺繡製作）
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              單個清楚、好批量、好入門——布章／袋角／鎖匙扣首選。
+              全部用針線繡——緞面針填色、結粒五官。畫風保持公仔感；可跟教學課一手練習。
             </p>
             <MotifGrid motifs={simpleMotifs} />
           </div>
@@ -301,11 +301,14 @@ export default function EmbroideryPage() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <Button href="/contact" variant="primary">
-              想訂圖騰／杯套／聯乘
+            <Button href="/embroidery/lessons" variant="primary">
+              刺繡教學（逐步學）
             </Button>
-            <Button href="/shop" variant="secondary">
-              開賣預覽
+            <Button href="/series/lesson-kit" variant="secondary">
+              公仔刺繡教學盒
+            </Button>
+            <Button href="/contact" variant="secondary">
+              想訂圖騰／聯乘
             </Button>
           </div>
         </Container>
