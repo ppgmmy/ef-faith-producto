@@ -28,7 +28,7 @@ export const footerNav: NavItem[] = [
 
 export const inquiryKindLabels = {
   series_book: "預約系列冊",
-  custom_gift: "訂製禮盒",
+  custom_gift: "訂製／舊衣重塑",
   church: "教會／小組合作",
   workshop: "工作坊",
   other: "其他",

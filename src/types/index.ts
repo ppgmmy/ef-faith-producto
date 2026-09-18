@@ -14,7 +14,9 @@ export type ProductId =
   | "visible-mend"
   | "word-bookmark"
   | "mustard-token"
-  | "table-linen";
+  | "table-linen"
+  | "bible-sleeve"
+  | "hoop-wall";
 
 export type ProductStatus =
   | "available"
