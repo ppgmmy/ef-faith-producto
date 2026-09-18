@@ -12,10 +12,10 @@ export function HomeBelief({ items = pillars }: { items?: typeof pillars }) {
         <div className="max-w-2xl">
           <Eyebrow>Belief</Eyebrow>
           <h2 className="mt-3 font-display text-3xl tracking-wide text-pine md:text-4xl">
-            兩條金線：環保，與信仰
+            環保 × 信仰
           </h2>
           <p className="mt-5 text-base leading-8 text-ash md:text-lg">
-            繕物誌相信：大地是託管，不是消耗品；人的破碎也可以被修好。我們把金繕精神帶進日常器物——少製造新垃圾，多述說恩典如何填滿裂縫。
+            繕物誌相信：大地是託管，不是消耗品。金繕精神係概念靈感；真正主賣嘅，係可愛信仰公仔圖騰刺繡——少製造新垃圾，多述說恩典。
           </p>
         </div>
         <GoldRule className="mt-14" />
@@ -43,9 +43,11 @@ export function HomeBelief({ items = pillars }: { items?: typeof pillars }) {
 }
 
 export function HomeSeriesPreview({
+  embroidery,
   goldVein,
   wovenMend,
 }: {
+  embroidery: Product[];
   goldVein: Product[];
   wovenMend: Product[];
 }) {
@@ -55,23 +57,26 @@ export function HomeSeriesPreview({
         <Container>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow className="text-gold-soft">Collection</Eyebrow>
+              <Eyebrow className="text-gold-soft">Main Sell</Eyebrow>
               <h2 className="mt-3 font-display text-3xl tracking-wide md:text-4xl">
-                「金線」器物系列
+                信仰公仔刺繡
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-sage md:text-right">
-              修復、安息、託管與重生——核心器物與體驗。
+              可愛圖騰係主賣點；金繕裂紋只係可選概念。
             </p>
           </div>
           <div className="mt-10">
-            {goldVein.slice(0, 3).map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+            {embroidery
+              .filter((p) => p.id.startsWith("motif"))
+              .slice(0, 4)
+              .map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
           </div>
           <div className="mt-8">
-            <Button href="/series" variant="gold">
-              看完整系列
+            <Button href="/embroidery" variant="gold">
+              睇刺繡專頁
             </Button>
           </div>
         </Container>
@@ -81,23 +86,23 @@ export function HomeSeriesPreview({
         <Container>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow className="text-gold-soft">Concept</Eyebrow>
+              <Eyebrow className="text-gold-soft">Concept · Daily</Eyebrow>
               <h2 className="mt-3 font-display text-3xl tracking-wide md:text-4xl">
-                「織繕」日常構思
+                概念器物 · 織繕日常
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-sage md:text-right">
-              公仔圖騰刺繡、毛巾、遮袋——信仰符號繡喺日常上面。
+              金繕器物作品牌靈感；毛巾、遮袋可加繡公仔。
             </p>
           </div>
           <div className="mt-10">
-            {wovenMend.map((product) => (
+            {[...goldVein.slice(0, 2), ...wovenMend].map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/embroidery" variant="gold">
-              睇公仔刺繡
+            <Button href="/series" variant="gold">
+              看完整系列
             </Button>
             <Button href="/contact" variant="ghost">
               想一起試做？

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   openGraph: {
     title: `${siteConfig.brandZh} ${siteConfig.brandEn}`,
-    description: "環保 × 信仰 × 金繕。器物與織繕日常的產品構思。",
+    description: "環保 × 信仰。主賣可愛公仔刺繡；金繕係概念靈感。",
     locale: "zh_HK",
     type: "website",
     siteName: siteConfig.brandZh,

@@ -6,27 +6,79 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { Button } from "@/components/ui/Button";
 import { Container, PageHeader, Section } from "@/components/ui/Section";
 import { getEmbroideryProducts } from "@/data/catalog";
-import { embroideryMotifs, motifOnProducts } from "@/data/motifs";
+import {
+  getPatternMotifs,
+  getSimpleMotifs,
+  motifOnProducts,
+} from "@/data/motifs";
 
 export const metadata: Metadata = {
-  title: "金線刺繡｜公仔圖騰繡喺上面",
+  title: "信仰公仔刺繡｜主賣圖騰",
   description:
-    "十字架、白鴿、彩虹、小聖經——可愛公仔風信仰刺繡，繡喺布章、tote、手帕、繡棚、訂製舊衣上面。",
+    "十字架、白鴿、彩虹、小聖經——可愛公仔係主賣點；另有進階故事 pattern。金繕裂紋只係概念靈感，可選唔必要。",
 };
+
+function MotifGrid({
+  motifs,
+}: {
+  motifs: ReturnType<typeof getSimpleMotifs>;
+}) {
+  return (
+    <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {motifs.map((motif) => (
+        <article
+          key={motif.id}
+          className="border border-sage/30 bg-white/50 p-4"
+        >
+          {motif.image ? (
+            <div className="relative mb-4 aspect-square overflow-hidden bg-mist">
+              <Image
+                src={motif.image}
+                alt={motif.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+          ) : null}
+          <div className="flex items-baseline justify-between gap-2">
+            <h3 className="font-display text-lg text-pine">{motif.name}</h3>
+            {motif.tier === "pattern" ? (
+              <span className="shrink-0 text-[10px] tracking-widest text-gold uppercase">
+                Pattern
+              </span>
+            ) : null}
+          </div>
+          <p className="mt-1 font-latin text-xs italic text-gold">{motif.en}</p>
+          <p className="mt-2 text-sm leading-6 text-ash">{motif.vibe}</p>
+          <p className="mt-3 text-xs text-moss">{motif.faith}</p>
+          <p className="mt-2 text-xs text-ash/80">
+            適合：{motif.bestOn.join(" · ")}
+            {motif.priceAddonHkd > 0
+              ? ` · 圖騰加價 +HK$${motif.priceAddonHkd}`
+              : " · 基本款"}
+          </p>
+        </article>
+      ))}
+    </div>
+  );
+}
 
 export default function EmbroideryPage() {
   const items = getEmbroideryProducts();
   const motifProducts = items.filter((p) => p.id.startsWith("motif"));
   const otherProducts = items.filter((p) => !p.id.startsWith("motif"));
+  const simpleMotifs = getSimpleMotifs();
+  const patternMotifs = getPatternMotifs();
 
   return (
     <SiteShell>
       <Section className="bg-linen pt-16 md:pt-20">
         <Container>
           <PageHeader
-            eyebrow="Cute Faith Motifs"
-            title="刺繡公仔圖騰"
-            description="賣點係上面繡嘅得意公仔：圓角十字架、白白鴿、約定彩虹、小小聖經。信仰清楚、好送好影。金繕裂紋只係可選嘅品牌簽名，唔係必須。"
+            eyebrow="Main Sell · Cute Motifs"
+            title="信仰公仔刺繡"
+            description="主賣點係上面繡嘅得意公仔同故事 pattern：十字架、白鴿、彩虹、小聖經，以至方舟、牧人等較密線款。金繕裂紋只係品牌概念靈感——可加可不加，唔係產品必要。"
           />
 
           <div className="relative mt-12 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
@@ -45,7 +97,7 @@ export default function EmbroideryPage() {
               繡喺產品上面
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              公仔唔只係布章——可以直接繡喺 tote、手帕角、小袋、繡棚壁飾，甚至你寄嚟嘅舊衣上面。
+              公仔可以直接繡喺 tote、手帕角、小袋、繡棚壁飾，甚至你寄嚟嘅舊衣上面——圖騰先係主角。
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               {motifOnProducts.map((item) => (
@@ -76,47 +128,22 @@ export default function EmbroideryPage() {
 
           <div className="mt-20">
             <h2 className="font-display text-2xl text-pine md:text-3xl">
-              可選圖騰
+              基本公仔圖騰
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              任何布章／袋／手帕／舊衣重塑，都可以揀下面公仔款。金色裂紋可加可不加——公仔先係主角。
+              單個清楚、好批量、好入門——布章／袋角／鎖匙扣首選。
             </p>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {embroideryMotifs.map((motif) => (
-                <article
-                  key={motif.id}
-                  className="border border-sage/30 bg-white/50 p-4"
-                >
-                  {motif.image ? (
-                    <div className="relative mb-4 aspect-square overflow-hidden bg-mist">
-                      <Image
-                        src={motif.image}
-                        alt={motif.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </div>
-                  ) : (
-                    <div className="mb-4 flex aspect-square items-center justify-center bg-mist font-display text-3xl text-gold">
-                      {motif.name.slice(0, 1)}
-                    </div>
-                  )}
-                  <h3 className="font-display text-lg text-pine">{motif.name}</h3>
-                  <p className="mt-1 font-latin text-xs italic text-gold">
-                    {motif.en}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-ash">{motif.vibe}</p>
-                  <p className="mt-3 text-xs text-moss">{motif.faith}</p>
-                  <p className="mt-2 text-xs text-ash/80">
-                    適合：{motif.bestOn.join(" · ")}
-                    {motif.priceAddonHkd > 0
-                      ? ` · 圖騰加價 +HK$${motif.priceAddonHkd}`
-                      : " · 基本款"}
-                  </p>
-                </article>
-              ))}
-            </div>
+            <MotifGrid motifs={simpleMotifs} />
+          </div>
+
+          <div className="mt-20">
+            <h2 className="font-display text-2xl text-pine md:text-3xl">
+              進階故事 Pattern
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
+              線密少少、場景感強：橄欖圈、方舟彩虹、開卷聖經、小牧人——適合繡棚同袋面大圖。
+            </p>
+            <MotifGrid motifs={patternMotifs} />
           </div>
 
           <div className="mt-20">
@@ -156,8 +183,11 @@ export default function EmbroideryPage() {
 
           <div className="mt-20">
             <h2 className="font-display text-2xl text-pine md:text-3xl">
-              其他信仰刺繡
+              其他刺繡載體
             </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
+              布章、手帕、書籤、聖經套等——一樣以公仔圖騰為主視覺。
+            </p>
             <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {otherProducts.map((product) => (
                 <article key={product.id}>

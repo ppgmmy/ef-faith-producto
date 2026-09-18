@@ -44,8 +44,8 @@ export function UpcycleQuote() {
         Custom Quote
       </p>
       <h3 className="mt-2 font-display text-2xl text-pine">舊衣刺繡重塑試算</h3>
-      <p className="mt-3 text-sm leading-7 text-ash">
-        揀物品、面積同公仔圖騰，即時睇參考價（非正式報價）。之後可預約真實評估。
+        <p className="mt-3 text-sm leading-7 text-ash">
+        揀物品、面積同公仔圖騰（簡單款或進階 pattern），即時睇參考價。金繕細線可選，唔係必須。
       </p>
 
       <div className="mt-6 space-y-5 text-sm">

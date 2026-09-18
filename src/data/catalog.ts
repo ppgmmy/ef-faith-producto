@@ -106,20 +106,20 @@ export const products: Product[] = [
     suitableFor: ["書房", "聖所角落", "訂製"],
     processNotes: ["木材安定處理", "玻璃鑲嵌", "金脈紋理", "電路組裝"],
   },
-  // —— 金線刺繡系列 ——
+  // —— 信仰公仔刺繡（主賣點；金繕裂紋可選）——
   {
     id: "gold-stitch",
     series: "E01",
     slug: "gold-stitch",
     line: "embroidery",
-    name: "金線布章",
-    en: "Gold Stitch Patch",
-    tagline: "一針一線，把裂縫織回光裡。",
+    name: "信仰布章入門",
+    en: "Faith Motif Patch",
+    tagline: "先繡一個得意公仔，金線簽名可加可不加。",
     description:
-      "有機棉／剩布布章，金繕脈紋刺繡；可配鎖匙扣。包裝經文卡「撕裂有時，縫補有時」——教會回禮、洗禮紀念、小組結業都啱賣。",
+      "有機棉／剩布布章，主視覺係可愛信仰圖騰（十字架／小魚等可選）；金色裂紋只係可選品牌簽名。可配鎖匙扣——教會回禮、洗禮紀念、小組結業都啱。",
     longDescription:
-      "細圓布章，米白底金色裂紋；信仰符號含蓄，唔誇張。可批量機繡。目標客：教會書店、婚禮基督徒賓客、青年小組。",
-    materials: "有機棉／剩布 · 金屬色繡線 · 金屬扣環",
+      "主賣點係公仔圖騰，唔係裂紋。米白底＋彩色／米色繡線；金繕脈可省略。目標客：教會書店、婚禮賓客、青年小組。",
+    materials: "有機棉／剩布 · 彩色繡線 · 可選金屬色點綴 · 金屬扣環",
     faith: "傳道書 3:7 — 撕裂有時，縫補有時",
     eco: "剩布升級再造；延長衣物壽命",
     category: "embroidery",
@@ -128,21 +128,21 @@ export const products: Product[] = [
     priceHkd: 88,
     image: "/products/gold-stitch.png",
     suitableFor: ["布章／鎖匙扣", "婚禮回禮", "小組訂製"],
-    processNotes: ["選布", "金脈圖樣", "繡製試版", "附意義短卡"],
+    processNotes: ["選布", "公仔圖樣", "繡製試版", "附意義短卡"],
   },
   {
     id: "gold-kerchief",
     series: "E02",
     slug: "gold-kerchief",
     line: "embroidery",
-    name: "金繕手帕",
-    en: "Kintsugi Kerchief",
-    tagline: "擦去眼淚，也留下光。",
+    name: "公仔角手帕",
+    en: "Motif Kerchief",
+    tagline: "擦去眼淚，角位留住一個公仔。",
     description:
-      "亞麻／有機棉手帕，一角金繕脈紋細繡。可隨身、可送人——安靜、實用，又帶著被修好的故事。",
+      "亞麻／有機棉手帕，一角繡可愛信仰公仔（小聖經／芥菜種／小魚可選）。安靜、實用；金色裂紋唔係必須。",
     longDescription:
-      "畫面：米白手帕摺好，角落金色裂紋線；可選極淡十字針腳（低調）。適合關懷探訪、婚禮手信、個人靈修伴手。可水洗，金線選色牢度高的繡線。",
-    materials: "亞麻／有機棉 · 金屬色繡線",
+      "畫面：米白手帕摺好，角落公仔圖騰；金繕細線可選。適合關懷探訪、婚禮手信、個人靈修伴手。",
+    materials: "亞麻／有機棉 · 彩色／米色繡線",
     faith: "啟示錄 21:4 — 神要擦去他們一切的眼淚",
     eco: "可重用布手帕，減少即棄紙巾",
     category: "embroidery",
@@ -151,20 +151,20 @@ export const products: Product[] = [
     priceHkd: 128,
     image: "/products/gold-kerchief.png",
     suitableFor: ["日常隨身", "關懷禮物", "婚禮手信"],
-    processNotes: ["裁切手帕", "角位刺繡", "鎖邊", "紙套包裝"],
+    processNotes: ["裁切手帕", "角位公仔刺繡", "鎖邊", "紙套包裝"],
   },
   {
     id: "stitch-kit",
     series: "E03",
     slug: "stitch-kit",
     line: "embroidery",
-    name: "可見修補刺繡盒",
-    en: "Visible Mend Kit",
-    tagline: "自己繡一道金線。",
+    name: "公仔圖騰刺繡盒",
+    en: "Motif Stitch Kit",
+    tagline: "自己繡一個信仰公仔。",
     description:
-      "靈修 DIY 刺繡盒（參考「邊繡邊默想」）：竹棚、金／綠線、練習布、針、7 日短默想卡。小組／親子／退修營都啱——親手把裂縫繡成光。",
+      "靈修 DIY 刺繡盒：竹棚、彩線、練習布、針、7 日短默想卡——主題係繡十字架／白鴿等公仔圖騰。金繕只係概念故事，唔綁死裂紋圖案。",
     longDescription:
-      "對齊市場上手作靈修包定價帶（約 HK$260）。我哋主題係金繕可見修補，唔只印花圖。可加開 90 分鐘工作坊。",
+      "對齊市場上手作靈修包定價帶（約 HK$260）。主練習公仔圖騰；可加開 90 分鐘工作坊。",
     materials: "竹繡棚 · 繡線 · 針 · 有機棉練習布 · 再生紙默想卡",
     faith: "哥林多後書 5:17 — 若有人在基督裡，他就是新造的人",
     eco: "教人修衣而非棄衣，從源頭減廢",
@@ -174,21 +174,21 @@ export const products: Product[] = [
     priceHkd: 260,
     image: "/products/stitch-kit.png",
     suitableFor: ["親子", "小組", "工作坊", "靈修體驗"],
-    processNotes: ["備料分裝", "教學卡", "7 日默想", "工作坊流程"],
+    processNotes: ["備料分裝", "公仔圖稿教學卡", "7 日默想", "工作坊流程"],
   },
   {
     id: "visible-mend",
     series: "E04",
     slug: "visible-mend",
     line: "embroidery",
-    name: "舊衣金繕繡",
-    en: "Visible Mend Service",
-    tagline: "你的破口，我們繡成金線。",
+    name: "舊衣公仔繡",
+    en: "Motif Upcycle Service",
+    tagline: "你的舊衣，我們繡上得意公仔。",
     description:
-      "舊衣／舊袋刺繡重塑（參考 before/after 服務）：寄來磨損衣物，金繕風格繡補裂縫或繡上經文圖騰。每件獨一無二，附修復短誌。",
+      "舊衣／舊袋刺繡重塑：寄來衣物，繡上十字架、白鴿、彩虹等公仔圖騰（可揀簡單款或進階 pattern）。金色補縫可選，唔係必須。每件附修復短誌。",
     longDescription:
-      "市場類似服務約 HK$420–680。我哋以金繕為主軸，可加橄欖／鴿子等選項。流程：相片評估 → 報價 → 刺繡 → 寄回。",
-    materials: "客衣／客布 · 金屬色／rPET 金絲繡線 · 加固襯布",
+      "主賣點係圖騰選擇。流程：相片評估 → 報價 → 刺繡 → 寄回。金繕裂紋只係加購選項。",
+    materials: "客衣／客布 · 彩色繡線 · 可選 rPET 金絲 · 加固襯布",
     faith: "詩篇 147:3 — 他醫好傷心的人，裹好他們的傷處",
     eco: "延長衣物壽命，拒絕快時尚丟棄",
     category: "embroidery",
@@ -197,21 +197,21 @@ export const products: Product[] = [
     priceHkd: 420,
     image: "/products/visible-mend.png",
     suitableFor: ["舊衣修復", "外套背部", "帆布袋重塑"],
-    processNotes: ["相片評估", "加固與刺繡", "拍照誌記", "寄回"],
+    processNotes: ["相片評估", "揀圖騰", "加固與刺繡", "寄回"],
   },
   {
     id: "word-bookmark",
     series: "E05",
     slug: "word-bookmark",
     line: "embroidery",
-    name: "金線書籤",
+    name: "話語書籤",
     en: "Word Bookmark",
-    tagline: "話語夾住，金線記得。",
+    tagline: "話語夾住，公仔記得。",
     description:
-      "有機棉書籤，金繕脈紋＋低調魚形。夾在聖經／靈修本——讀經時摸到「被修好」的記號。受洗禮、同工感謝都啱。",
+      "有機棉書籤，主視覺小小魚／小聖經公仔。夾在聖經／靈修本——讀經時摸到得意記號。受洗禮、同工感謝都啱。",
     longDescription:
-      "對齊市場書籤價位（約 HK$150 帶）。我哋可做流蘇升級。批量給教會書店寄賣。",
-    materials: "有機棉 · 金屬色繡線 · 再生紙說明卡",
+      "對齊市場書籤價位（約 HK$150 帶）。公仔為主；金繕脈可省略。批量給教會書店寄賣。",
+    materials: "有機棉 · 彩色繡線 · 再生紙說明卡",
     faith: "詩篇 119:105 — 你的話是我腳前的燈",
     eco: "布書籤可長期用，少用塑膠書籤",
     category: "embroidery",
@@ -220,7 +220,7 @@ export const products: Product[] = [
     priceHkd: 120,
     image: "/products/word-bookmark.png",
     suitableFor: ["讀經", "受洗禮物", "書店寄賣"],
-    processNotes: ["裁切書籤", "金脈＋魚形刺繡", "鎖邊", "經文卡包裝"],
+    processNotes: ["裁切書籤", "公仔刺繡", "鎖邊", "經文卡包裝"],
   },
   {
     id: "mustard-token",
@@ -231,10 +231,10 @@ export const products: Product[] = [
     en: "Mustard Seed Token",
     tagline: "信心，可以好細，仍然發芽。",
     description:
-      "手心大小布片，金繕線＋一粒芥菜種針腳。放銀包／口袋，提醒信心與醫治。關懷探訪、洗禮紀念啱用。",
+      "手心大小布片，主視覺芥菜種芽芽公仔。放銀包／口袋，提醒信心與醫治。關懷探訪、洗禮紀念啱用。",
     longDescription:
-      "最小件、最好試產。故事清楚：馬太 17:20。可訂製名字（加價）。",
-    materials: "亞麻／有機棉 · 金屬色繡線 · 紙封套",
+      "最小件、最好試產。故事清楚：馬太 17:20。可訂製名字（加價）。金線點綴可選。",
+    materials: "亞麻／有機棉 · 綠／米繡線 · 紙封套",
     faith: "馬太福音 17:20 — 你們若有信心像一粒芥菜種",
     eco: "剩布升級；小件少運輸負擔",
     category: "embroidery",
@@ -243,7 +243,7 @@ export const products: Product[] = [
     priceHkd: 58,
     image: "/products/mustard-token.png",
     suitableFor: ["關懷探訪", "洗禮紀念", "個人提醒"],
-    processNotes: ["裁圓／方片", "金線＋種子點", "鎖邊", "經文封套"],
+    processNotes: ["裁圓／方片", "芽芽公仔", "鎖邊", "經文封套"],
   },
   {
     id: "table-linen",
@@ -252,12 +252,12 @@ export const products: Product[] = [
     line: "embroidery",
     name: "擘餅布巾",
     en: "Table Linen",
-    tagline: "桌上有餅，布上有金線。",
+    tagline: "桌上有餅，角上有公仔。",
     description:
-      "亞麻餐巾角繡金繕脈＋細麥穗。家居安息餐、小組擘餅、教會聖餐預備——信仰生活化。",
+      "亞麻餐巾角繡細麥穗／小魚公仔。家居安息餐、小組擘餅、教會聖餐預備——信仰生活化。",
     longDescription:
-      "群體訂單潛力。可訂製堂會縮寫。",
-    materials: "亞麻／有機棉 · 金屬色繡線",
+      "群體訂單潛力。可訂製堂會縮寫。金色裂紋唔係主視覺。",
+    materials: "亞麻／有機棉 · 彩色繡線",
     faith: "路加福音 22:19 — 你們應當如此行，為的是記念我",
     eco: "布巾可洗重用，減少即棄紙巾",
     category: "embroidery",
@@ -266,21 +266,21 @@ export const products: Product[] = [
     priceHkd: 268,
     image: "/products/table-linen.png",
     suitableFor: ["小組擘餅", "安息餐", "教會訂製"],
-    processNotes: ["選布鎖邊", "角繡圖樣", "對裝包裝", "堂會訂製選項"],
+    processNotes: ["選布鎖邊", "角繡圖騰", "對裝包裝", "堂會訂製選項"],
   },
   {
     id: "bible-sleeve",
     series: "E08",
     slug: "bible-sleeve",
     line: "embroidery",
-    name: "金繕聖經套",
+    name: "聖經套",
     en: "Bible Sleeve",
-    tagline: "話語有遮蓋，裂縫有金線。",
+    tagline: "話語有遮蓋，套面有公仔。",
     description:
-      "GOTS 有機亞麻聖經套，金繕脈紋＋橄欖枝。經文×圖騰×永續布料——讀經時觸摸故事。",
+      "GOTS 有機亞麻聖經套，主視覺橄欖枝／小聖經公仔。經文×圖騰×永續布料——讀經時觸摸故事。",
     longDescription:
-      "對齊市場聖經套約 HK$380。差異化：金繕裂紋主視覺。可選詩篇 23 短句刺繡。",
-    materials: "GOTS 有機亞麻 · rPET／金屬色繡線",
+      "對齊市場聖經套約 HK$380。差異化：可愛圖騰主視覺；金繕裂紋可選。可選詩篇 23 短句刺繡。",
+    materials: "GOTS 有機亞麻 · 彩色／rPET 繡線",
     faith: "詩篇 23:1 — 耶和華是我的牧者",
     eco: "有機亞麻＋回收繡線選項",
     category: "embroidery",
@@ -289,21 +289,21 @@ export const products: Product[] = [
     priceHkd: 380,
     image: "/products/bible-sleeve.png",
     suitableFor: ["個人靈修", "受洗禮物", "書店寄賣"],
-    processNotes: ["量度尺寸", "車縫書套", "金繕＋橄欖刺繡", "經文卡"],
+    processNotes: ["量度尺寸", "車縫書套", "公仔／橄欖刺繡", "經文卡"],
   },
   {
     id: "hoop-wall",
     series: "E09",
     slug: "hoop-wall",
     line: "embroidery",
-    name: "金線繡棚壁飾",
-    en: "Hoop Wall",
-    tagline: "掛牆的一道金線。",
+    name: "公仔繡棚壁飾",
+    en: "Motif Hoop Wall",
+    tagline: "掛牆嘅一個信仰公仔。",
     description:
-      "竹繡棚壁飾：金繕脈＋橄欖葉。家居、小組角落、教會接待——信仰工藝做成氛圍。",
+      "竹繡棚壁飾：橄欖葉、芥菜種、白鴿或進階 pattern（方舟／牧人）。家居、小組角落、教會接待——信仰工藝做成氛圍。",
     longDescription:
-      "對齊市場壁飾約 HK$560。可延伸主題：芥菜種、野地百合、金繕。",
-    materials: "竹繡棚 · 有機棉／亞麻 · 金／綠繡線",
+      "對齊市場壁飾約 HK$560。主賣圖騰選擇；金繕脈可省略。",
+    materials: "竹繡棚 · 有機棉／亞麻 · 彩色繡線",
     faith: "創世記 1:3 — 要有光",
     eco: "竹框可再生；布料可選有機認證",
     category: "embroidery",
@@ -312,7 +312,7 @@ export const products: Product[] = [
     priceHkd: 520,
     image: "/products/hoop-wall.png",
     suitableFor: ["家居", "小組空間", "禮物"],
-    processNotes: ["選棚固定", "刺繡主題", "背面掛繩", "禮盒"],
+    processNotes: ["選棚固定", "刺繡圖騰", "背面掛繩", "禮盒"],
   },
   {
     id: "motif-pack",
@@ -475,6 +475,29 @@ export const products: Product[] = [
     suitableFor: ["家居", "小組空間", "禮物"],
     processNotes: ["選棚", "繡公仔十字", "掛繩", "禮盒"],
   },
+  {
+    id: "motif-pattern-pack",
+    series: "E17",
+    slug: "motif-pattern-pack",
+    line: "embroidery",
+    name: "進階故事圖騰組",
+    en: "Story Pattern Set",
+    tagline: "複雜少少嘅故事 pattern——層次多、好影。",
+    description:
+      "一套 4 款進階公仔圖騰布章：橄欖圈白鴿、方舟約定景、開卷小聖經、小牧人與羊。比單個 icon 密線多、場景感強——繡棚／袋面／禮物都啱。",
+    longDescription:
+      "主賣點仍然係可愛信仰公仔，只係圖案複雜一級。適合想要「一幅小故事」多過單一符號嘅客人。金繕裂紋唔需要。",
+    materials: "有機棉／剩布 · 多彩繡線 · 背膠／鎖匙扣選項",
+    faith: "多經文故事主題 — 平安、約定、話語、牧養",
+    eco: "剩布升級；成套好送",
+    category: "embroidery",
+    status: "preorder",
+    priceHint: "套裝建議",
+    priceHkd: 288,
+    image: "/products/motif-ark-rainbow.png",
+    suitableFor: ["繡棚", "禮物", "寄賣", "親子"],
+    processNotes: ["故事圖稿", "打版試繡", "鎖邊", "套裝卡"],
+  },
   // —— 織繕日常（毛巾／遮袋）——
   {
     id: "rest-towel",
@@ -535,7 +558,15 @@ export const products: Product[] = [
 ];
 
 export function getShopPreviewProducts(): Product[] {
-  return products.filter((product) => typeof product.priceHkd === "number");
+  const priced = products.filter((product) => typeof product.priceHkd === "number");
+  return [...priced].sort((a, b) => {
+    const rank = (p: Product) => {
+      if (p.id.startsWith("motif")) return 0;
+      if (p.line === "embroidery") return 1;
+      return 2;
+    };
+    return rank(a) - rank(b);
+  });
 }
 
 export function getEmbroideryProducts(): Product[] {
@@ -546,7 +577,7 @@ export const pillars: BeliefPillar[] = [
   {
     id: "mend",
     title: "修補，而非丟棄",
-    body: "金繕教我們：破碎不是終點。產品線以修復、再造、可堆肥為優先，讓物料繼續服事人。",
+    body: "金繕係品牌概念靈感：破碎唔係終點。真正上架賣嘅，以可愛信仰圖騰刺繡為主；金色裂紋可選、唔綁死產品。",
   },
   {
     id: "steward",
@@ -556,7 +587,7 @@ export const pillars: BeliefPillar[] = [
   {
     id: "grace",
     title: "裂縫裡的恩典",
-    body: "金線不是遮醜，是見證。我們把環保行動寫進故事，讓使用者觸摸「被修好」的盼望。",
+    body: "金線意象提醒恩典填滿裂縫；產品面則以公仔圖騰講故事，讓人摸得到、影得到、送得出。",
   },
 ];
 

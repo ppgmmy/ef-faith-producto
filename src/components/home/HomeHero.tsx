@@ -26,11 +26,11 @@ export function HomeHero() {
             {siteConfig.tagline}
           </p>
           <p className="animate-rise-delay-2 mt-4 max-w-md text-[15px] leading-7 font-light text-sage md:text-base">
-            環保與信仰交會之處：不丟棄、不遮醜，讓裂縫成為金線，讓舊物繼續服事這地。
+            環保 × 信仰：主賣可愛信仰公仔刺繡；金繕精神係概念靈感——裂紋可選，圖騰先係主角。
           </p>
           <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-4">
-            <Button href="/series" variant="gold">
-              看產品系列
+            <Button href="/embroidery" variant="gold">
+              睇公仔刺繡
             </Button>
             <Button href="/belief" variant="ghost">
               我們為何而做

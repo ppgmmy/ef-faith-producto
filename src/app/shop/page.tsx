@@ -8,7 +8,8 @@ import { getShopPreviewProducts } from "@/data/catalog";
 
 export const metadata: Metadata = {
   title: "開賣預覽",
-  description: "繕物誌第一波產品畫面：金線布章、遮袋、安息巾——附建議售價。",
+  description:
+    "繕物誌主賣信仰公仔刺繡：布章、tote、手帕、繡棚——金繕裂紋可選，圖騰先係賣點。",
 };
 
 export default function ShopPreviewPage() {
@@ -21,7 +22,7 @@ export default function ShopPreviewPage() {
           <PageHeader
             eyebrow="Shop Preview"
             title="如果開始賣，會長咁"
-            description="刺繡線優先：布章、手帕、刺繡盒、舊衣金繕繡；另有安息巾同遮袋。而家係畫面預覽，未接真實結帳。"
+            description="主打可愛信仰公仔圖騰（簡單款＋進階 pattern）；金繕裂紋只係可選概念。另有安息巾同遮袋。而家係畫面預覽，未接真實結帳。"
           />
 
           <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">

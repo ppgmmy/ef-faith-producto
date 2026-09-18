@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   brandEn: "Kintsugi Studio",
   tagline: "以修補重拾創造之美。",
   description:
-    "繕物誌結合環保與信仰：以金繕精神修復舊物，讓裂縫成為光，讓捨棄變成守護。",
+    "繕物誌結合環保與信仰：可愛信仰公仔圖騰刺繡係主賣點；金繕精神係品牌概念靈感，金色裂紋可選、唔係必須。",
   email: "hello@kintsugi.studio",
   locale: "zh-Hant",
 };
@@ -20,8 +20,8 @@ export const mainNav: NavItem[] = [
 
 export const footerNav: NavItem[] = [
   { href: "/belief", label: "信念" },
-  { href: "/embroidery", label: "金線刺繡" },
-  { href: "/series", label: "金線系列" },
+  { href: "/embroidery", label: "公仔刺繡" },
+  { href: "/series", label: "產品系列" },
   { href: "/shop", label: "開賣預覽" },
   { href: "/contact", label: "聯絡繕物誌" },
 ];
@@ -35,7 +35,7 @@ export const inquiryKindLabels = {
 } as const;
 
 export const lineLabels = {
-  "gold-vein": "金線器物",
+  "gold-vein": "金線器物（概念線）",
   "woven-mend": "織繕日常",
-  embroidery: "金線刺繡",
+  embroidery: "信仰公仔刺繡",
 } as const;

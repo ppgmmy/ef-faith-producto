@@ -3,15 +3,16 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { ProductCard } from "@/components/products/ProductCard";
 import { Button } from "@/components/ui/Button";
 import { Container, Eyebrow, PageHeader, Section } from "@/components/ui/Section";
-import { getProductsByLine } from "@/data/catalog";
+import { getEmbroideryProducts, getProductsByLine } from "@/data/catalog";
 
 export const metadata: Metadata = {
   title: "產品系列",
   description:
-    "繕物誌金線器物系列，以及刺繡、毛巾、遮袋等織繕日常初步構思。",
+    "繕物誌主賣信仰公仔刺繡；金繕器物係概念線；另有毛巾、遮袋等織繕日常。",
 };
 
 export default function SeriesPage() {
+  const embroidery = getEmbroideryProducts();
   const goldVein = getProductsByLine("gold-vein");
   const wovenMend = getProductsByLine("woven-mend");
 
@@ -23,14 +24,37 @@ export default function SeriesPage() {
             tone="dark"
             eyebrow="Collection"
             title="產品系列"
-            description="器物修復與織繕日常兩條線：前者較成熟，後者為刺繡、毛巾、遮袋等初步構思，歡迎一起試做。"
+            description="主賣點：可愛信仰公仔刺繡。金繕器物保留為品牌概念線；織繕日常（毛巾、遮袋）可一齊試做。"
           />
 
           <div className="mt-16">
-            <Eyebrow className="text-gold-soft">金線器物</Eyebrow>
+            <Eyebrow className="text-gold-soft">主賣 · 信仰公仔刺繡</Eyebrow>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl">
+              圖騰繡喺上面
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-sage">
+              十字架、白鴿、彩虹、小聖經，以至進階故事 pattern。金色裂紋可選、唔係必須。
+            </p>
+            <div className="mt-8">
+              {embroidery.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            <div className="mt-8">
+              <Button href="/embroidery" variant="gold">
+                睇刺繡專頁
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-20 border-t border-moss/40 pt-16">
+            <Eyebrow className="text-gold-soft">概念線 · 金繕器物</Eyebrow>
             <h2 className="mt-3 font-display text-2xl md:text-3xl">
               修復 · 安息 · 託管
             </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-sage">
+              金繕精神係品牌靈感；器物線繼續存在，但唔再係刺繡產品嘅必要圖案。
+            </p>
             <div className="mt-8">
               {goldVein.map((product) => (
                 <ProductCard key={product.id} product={product} />
@@ -39,12 +63,12 @@ export default function SeriesPage() {
           </div>
 
           <div className="mt-20 border-t border-moss/40 pt-16">
-            <Eyebrow className="text-gold-soft">織繕日常 · 初步構思</Eyebrow>
+            <Eyebrow className="text-gold-soft">織繕日常</Eyebrow>
             <h2 className="mt-3 font-display text-2xl md:text-3xl">
-              刺繡 · 毛巾 · 遮袋
+              毛巾 · 遮袋
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-sage">
-              把金繕精神縫進布料：可見的修補、可重用的遮蓋、可觸摸的安息。現階段標示為「初步構思」，可小批量試版或聯乘。
+              可重用日常小物；可加繡公仔圖騰。
             </p>
             <div className="mt-8">
               {wovenMend.map((product) => (

@@ -119,7 +119,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
           {related.length > 0 ? (
             <div className="mt-16 border-t border-moss/40 pt-12">
-              <h2 className="font-display text-2xl">相關金線</h2>
+              <h2 className="font-display text-2xl">相關產品</h2>
               <ul className="mt-6 space-y-4">
                 {related.map((item) => (
                   <li key={item.id}>
