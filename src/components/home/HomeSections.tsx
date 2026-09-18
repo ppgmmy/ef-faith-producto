@@ -87,7 +87,7 @@ export function HomeSeriesPreview({
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-sage md:text-right">
-              刺繡、毛巾、遮袋——把金線縫進日常，現為初步構思。
+              公仔圖騰刺繡、毛巾、遮袋——信仰符號繡喺日常上面。
             </p>
           </div>
           <div className="mt-10">
@@ -95,8 +95,11 @@ export function HomeSeriesPreview({
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          <div className="mt-8">
-            <Button href="/contact" variant="gold">
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button href="/embroidery" variant="gold">
+              睇公仔刺繡
+            </Button>
+            <Button href="/contact" variant="ghost">
               想一起試做？
             </Button>
           </div>

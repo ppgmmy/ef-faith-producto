@@ -19,7 +19,11 @@ export type ProductId =
   | "hoop-wall"
   | "motif-pack"
   | "motif-cross"
-  | "motif-dove";
+  | "motif-dove"
+  | "motif-tote"
+  | "motif-kerchief"
+  | "motif-hoop"
+  | "motif-rainbow";
 
 export type ProductStatus =
   | "available"

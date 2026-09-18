@@ -6,22 +6,18 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { Button } from "@/components/ui/Button";
 import { Container, PageHeader, Section } from "@/components/ui/Section";
 import { getEmbroideryProducts } from "@/data/catalog";
-import { embroideryMotifs } from "@/data/motifs";
+import { embroideryMotifs, motifOnProducts } from "@/data/motifs";
 
 export const metadata: Metadata = {
-  title: "金線刺繡｜公仔圖騰 × 信仰",
+  title: "金線刺繡｜公仔圖騰繡喺上面",
   description:
-    "十字架、白鴿、彩虹、小聖經——可愛公仔風信仰刺繡，可做布章、小袋、訂製舊衣。",
+    "十字架、白鴿、彩虹、小聖經——可愛公仔風信仰刺繡，繡喺布章、tote、手帕、繡棚、訂製舊衣上面。",
 };
 
 export default function EmbroideryPage() {
   const items = getEmbroideryProducts();
-  const motifProducts = items.filter((p) =>
-    p.id.startsWith("motif") || p.id === "motif-pack",
-  );
-  const otherProducts = items.filter(
-    (p) => !p.id.startsWith("motif") && p.id !== "motif-pack",
-  );
+  const motifProducts = items.filter((p) => p.id.startsWith("motif"));
+  const otherProducts = items.filter((p) => !p.id.startsWith("motif"));
 
   return (
     <SiteShell>
@@ -30,7 +26,7 @@ export default function EmbroideryPage() {
           <PageHeader
             eyebrow="Cute Faith Motifs"
             title="刺繡公仔圖騰"
-            description="上面繡嘅係得意公仔：圓角十字架、白白鴿、約定彩虹、小小聖經。信仰清楚，又唔硬銷——好送、好影、好賣。"
+            description="賣點係上面繡嘅得意公仔：圓角十字架、白白鴿、約定彩虹、小小聖經。信仰清楚、好送好影。金繕裂紋只係可選嘅品牌簽名，唔係必須。"
           />
 
           <div className="relative mt-12 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
@@ -46,10 +42,44 @@ export default function EmbroideryPage() {
 
           <div className="mt-14">
             <h2 className="font-display text-2xl text-pine md:text-3xl">
-              可選圖騰（繡喺產品上面）
+              繡喺產品上面
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              任何布章／袋／手帕／舊衣重塑，都可以揀下面公仔款。金繕細線可以做品牌簽名，唔搶公仔鏡。
+              公仔唔只係布章——可以直接繡喺 tote、手帕角、小袋、繡棚壁飾，甚至你寄嚟嘅舊衣上面。
+            </p>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              {motifOnProducts.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="group block overflow-hidden"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-mist">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                  <h3 className="mt-4 font-display text-xl text-pine">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-ash">
+                    {item.caption}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-20">
+            <h2 className="font-display text-2xl text-pine md:text-3xl">
+              可選圖騰
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
+              任何布章／袋／手帕／舊衣重塑，都可以揀下面公仔款。金色裂紋可加可不加——公仔先係主角。
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {embroideryMotifs.map((motif) => (
