@@ -10,7 +10,11 @@ export type MotifId =
   | "olive-wreath"
   | "ark-rainbow"
   | "open-bible"
-  | "shepherd";
+  | "shepherd"
+  | "loaves-fish"
+  | "manger-star"
+  | "mustard-tree"
+  | "lilies-cross";
 
 export type MotifTier = "simple" | "pattern";
 
@@ -137,6 +141,50 @@ export const embroideryMotifs: EmbroideryMotif[] = [
     tier: "pattern",
     image: "/products/motif-shepherd.png",
   },
+  {
+    id: "loaves-fish",
+    name: "五餅二魚籃",
+    en: "Loaves & Fish",
+    vibe: "圓籃＋五餅＋兩條笑魚——供應故事，線密層次多",
+    faith: "馬太福音 14:19 — 就擘開餅，遞給門徒",
+    bestOn: ["繡棚", "擘餅布巾", "Tote 正面", "大布章"],
+    priceAddonHkd: 75,
+    tier: "pattern",
+    image: "/products/motif-loaves-fish.png",
+  },
+  {
+    id: "manger-star",
+    name: "馬槽與星",
+    en: "Manger & Star",
+    vibe: "小馬槽＋柔光星芒——聖誕／降生主題進階景",
+    faith: "路加福音 2:12 — 你們要看見一個嬰孩",
+    bestOn: ["繡棚", "聖誕禮物", "壁飾", "袋面"],
+    priceAddonHkd: 85,
+    tier: "pattern",
+    image: "/products/motif-manger-star.png",
+  },
+  {
+    id: "mustard-tree",
+    name: "芥菜樹小鳥",
+    en: "Mustard Tree Nest",
+    vibe: "圓樹＋枝頭小鳥——由一粒種長成樹的進階版",
+    faith: "馬太福音 13:32 — 長成樹，天上的飛鳥來宿在它的枝上",
+    bestOn: ["繡棚", "兒童房", "外套背部", "大布章"],
+    priceAddonHkd: 70,
+    tier: "pattern",
+    image: "/products/motif-mustard-tree.png",
+  },
+  {
+    id: "lilies-cross",
+    name: "百合與十字",
+    en: "Lilies & Cross",
+    vibe: "圓角十字立喺三朵野地百合之間——花＋符號層疊",
+    faith: "馬太福音 6:28 — 你想野地裡的百合花",
+    bestOn: ["繡棚", "手帕加大", "關懷禮物", "壁飾"],
+    priceAddonHkd: 65,
+    tier: "pattern",
+    image: "/products/motif-lilies-cross.png",
+  },
 ];
 
 export function getSimpleMotifs(): EmbroideryMotif[] {
@@ -176,5 +224,12 @@ export const motifOnProducts = [
     caption: "正面圓身白鴿＋橄欖葉，日常收納都得意。",
     image: "/products/motif-dove.png",
     href: "/series/motif-dove",
+  },
+  {
+    id: "on-loaves-hoop",
+    title: "五餅二魚繡喺繡棚",
+    caption: "進階故事 pattern：一籃供應，掛牆都有畫面。",
+    image: "/products/motif-hoop-loaves.png",
+    href: "/series/motif-hoop-loaves",
   },
 ] as const;

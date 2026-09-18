@@ -141,8 +141,17 @@ export default function EmbroideryPage() {
               進階故事 Pattern
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
-              線密少少、場景感強：橄欖圈、方舟彩虹、開卷聖經、小牧人——適合繡棚同袋面大圖。
+              線密少少、場景感強：橄欖圈、方舟、開卷聖經、牧人、五餅二魚、馬槽與星、芥菜樹、百合十字——適合繡棚同袋面大圖。
             </p>
+            <div className="relative mt-8 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
+              <Image
+                src="/products/motifs-pattern-set.png"
+                alt="進階故事圖騰組"
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
             <MotifGrid motifs={patternMotifs} />
           </div>
 

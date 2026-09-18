@@ -24,7 +24,9 @@ export type ProductId =
   | "motif-kerchief"
   | "motif-hoop"
   | "motif-rainbow"
-  | "motif-pattern-pack";
+  | "motif-pattern-pack"
+  | "motif-pattern-pack-2"
+  | "motif-hoop-loaves";
 
 export type ProductStatus =
   | "available"
