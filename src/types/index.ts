@@ -30,7 +30,9 @@ export type ProductId =
   | "motif-botanical-pack"
   | "cup-sleeve"
   | "drink-motif-pack"
-  | "lesson-kit";
+  | "lesson-kit"
+  | "word-pack"
+  | "word-verse-bookmark";
 
 export type ProductStatus =
   | "available"

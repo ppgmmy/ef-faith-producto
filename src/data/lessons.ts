@@ -8,7 +8,8 @@ export type LessonId =
   | "knot-mustard"
   | "satin-fish"
   | "long-short-sunflower"
-  | "satin-blue-flowers";
+  | "satin-blue-flowers"
+  | "calligraphy-grace";
 
 export interface EmbroideryLesson {
   id: LessonId;
@@ -217,6 +218,34 @@ export const embroideryLessons: EmbroideryLesson[] = [
     ],
     tips: ["小花宜細，一朵用時唔好超過指頭寬，先似教學樣本。"],
     image: "/products/motif-blue-flowers.png",
+  },
+  {
+    id: "calligraphy-grace",
+    lessonNo: 9,
+    title: "恩典（書法字）",
+    en: "Grace Calligraphy",
+    stitch: "satin + stem stitch",
+    stitchZh: "緞面針＋梗針（書法）",
+    level: "進階",
+    durationMin: 75,
+    motifId: "word-grace",
+    summary:
+      "用緞面針同梗針繡出毛筆字筆觸——「恩典」二字優雅大氣，學識可以自訂其他祝福字。",
+    faith: "哥林多後書 12:9 — 我的恩典夠你用",
+    materials: ["練習布", "金／深綠繡線", "水消筆", "繡棚", "針"],
+    steps: [
+      "用水消筆描出「恩典」書法字稿（可印字帖轉印）。",
+      "主筆畫用緞面針沿筆觸方向填滿。",
+      "細筆同飛白用梗針或短直針。",
+      "轉折處分開兩段緞面，保持筆鋒感。",
+      "可選金線勾邊或加小印章式結粒。",
+      "完成後可做布章、書籤或繡棚。",
+    ],
+    tips: [
+      "書法字最緊要筆觸方向一致，緞面針要跟住筆畫走。",
+      "飛白位留少少布底，會更似毛筆。",
+    ],
+    image: "/products/word-grace.png",
   },
 ];
 

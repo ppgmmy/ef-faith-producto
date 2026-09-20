@@ -10,6 +10,7 @@ import {
   getBotanicalMotifs,
   getPatternMotifs,
   getSimpleMotifs,
+  getWordMotifs,
   motifOnProducts,
   type EmbroideryMotif,
 } from "@/data/motifs";
@@ -43,7 +44,11 @@ function MotifGrid({ motifs }: { motifs: EmbroideryMotif[] }) {
             <h3 className="font-display text-lg text-pine">{motif.name}</h3>
             {motif.tier !== "simple" ? (
               <span className="shrink-0 text-[10px] tracking-widest text-gold uppercase">
-                {motif.tier === "botanical" ? "Botanical" : "Pattern"}
+                {motif.tier === "botanical"
+                  ? "Botanical"
+                  : motif.tier === "word"
+                    ? "Word"
+                    : "Pattern"}
               </span>
             ) : null}
           </div>
@@ -72,18 +77,21 @@ export default function EmbroideryPage() {
   const motifProducts = items.filter(
     (p) =>
       p.id.startsWith("motif") ||
+      p.id.startsWith("word-") ||
       p.id === "cup-sleeve" ||
       p.id === "drink-motif-pack",
   );
   const otherProducts = items.filter(
     (p) =>
       !p.id.startsWith("motif") &&
+      !p.id.startsWith("word-") &&
       p.id !== "cup-sleeve" &&
       p.id !== "drink-motif-pack",
   );
   const simpleMotifs = getSimpleMotifs();
   const patternMotifs = getPatternMotifs();
   const botanicalMotifs = getBotanicalMotifs();
+  const wordMotifs = getWordMotifs();
 
   return (
     <SiteShell>
@@ -167,6 +175,25 @@ export default function EmbroideryPage() {
               />
             </div>
             <MotifGrid motifs={patternMotifs} />
+          </div>
+
+          <div className="mt-20">
+            <h2 className="font-display text-2xl text-pine md:text-3xl">
+              靚字書法 Word
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-ash">
+              恩典、平安、喜樂、盼望、慈愛、信心——書法筆觸用緞面針＋梗針繡出，優雅又有份量。
+            </p>
+            <div className="relative mt-8 aspect-[4/3] overflow-hidden bg-mist md:aspect-[21/9]">
+              <Image
+                src="/products/words-set.png"
+                alt="靚字祝福布章組"
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
+            <MotifGrid motifs={wordMotifs} />
           </div>
 
           <div className="mt-20">

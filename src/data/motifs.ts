@@ -17,10 +17,16 @@ export type MotifId =
   | "lilies-cross"
   | "sunflower"
   | "wild-rose"
-  | "blue-flowers";
+  | "blue-flowers"
+  | "word-grace"
+  | "word-peace"
+  | "word-joy"
+  | "word-hope"
+  | "word-love"
+  | "word-faith";
 
-/** simple=單個公仔；pattern=故事場景；botanical=花草針法（長短針／緞面針） */
-export type MotifTier = "simple" | "pattern" | "botanical";
+/** simple=單個公仔；pattern=故事場景；botanical=花草針法；word=書法靚字 */
+export type MotifTier = "simple" | "pattern" | "botanical" | "word";
 
 export interface EmbroideryMotif {
   id: MotifId;
@@ -226,6 +232,78 @@ export const embroideryMotifs: EmbroideryMotif[] = [
     stitchHint: "satin stitch",
     image: "/products/motif-blue-flowers.png",
   },
+  {
+    id: "word-grace",
+    name: "恩典",
+    en: "Grace",
+    vibe: "書法筆觸用緞面針＋梗針繡出——金色為主，優雅大氣",
+    faith: "哥林多後書 12:9 — 我的恩典夠你用",
+    bestOn: ["布章", "書籤", "繡棚", "禮物"],
+    priceAddonHkd: 45,
+    tier: "word",
+    stitchHint: "satin + stem stitch",
+    image: "/products/word-grace.png",
+  },
+  {
+    id: "word-peace",
+    name: "平安",
+    en: "Peace",
+    vibe: "深綠書法＋金線點綴——靜靜哋嘅祝福",
+    faith: "約翰福音 14:27 — 我留下平安給你們",
+    bestOn: ["布章", "手帕", "關懷禮物", "繡棚"],
+    priceAddonHkd: 45,
+    tier: "word",
+    stitchHint: "satin + stem stitch",
+    image: "/products/word-peace.png",
+  },
+  {
+    id: "word-joy",
+    name: "喜樂",
+    en: "Joy",
+    vibe: "暖金珊瑚色筆觸＋小花點綴——開心都繡得出",
+    faith: "腓立比書 4:4 — 你們要靠主常常喜樂",
+    bestOn: ["布章", "婚禮回禮", "繡棚", "袋面"],
+    priceAddonHkd: 45,
+    tier: "word",
+    stitchHint: "satin + stem stitch",
+    image: "/products/word-joy.png",
+  },
+  {
+    id: "word-hope",
+    name: "盼望",
+    en: "Hope",
+    vibe: "鼠尾草綠書法＋小芽點綴——溫柔嘅期待",
+    faith: "羅馬書 15:13 — 使你們藉著聖靈的能力大有盼望",
+    bestOn: ["布章", "關懷禮物", "書籤", "繡棚"],
+    priceAddonHkd: 45,
+    tier: "word",
+    stitchHint: "satin + stem stitch",
+    image: "/products/word-hope.png",
+  },
+  {
+    id: "word-love",
+    name: "慈愛",
+    en: "Lovingkindness",
+    vibe: "暖金紅筆觸＋小心心——厚嘅愛",
+    faith: "詩篇 136 — 他的慈愛永遠長存",
+    bestOn: ["布章", "婚禮", "關懷", "繡棚"],
+    priceAddonHkd: 45,
+    tier: "word",
+    stitchHint: "satin + stem stitch",
+    image: "/products/word-love.png",
+  },
+  {
+    id: "word-faith",
+    name: "信心",
+    en: "Faith",
+    vibe: "深青書法＋芥菜種小點——細細粒但有力",
+    faith: "希伯來書 11:1 — 信就是所望之事的實底",
+    bestOn: ["布章", "鎖匙扣", "書籤", "手帕"],
+    priceAddonHkd: 45,
+    tier: "word",
+    stitchHint: "satin + stem stitch",
+    image: "/products/word-faith.png",
+  },
 ];
 
 export function getSimpleMotifs(): EmbroideryMotif[] {
@@ -238,6 +316,10 @@ export function getPatternMotifs(): EmbroideryMotif[] {
 
 export function getBotanicalMotifs(): EmbroideryMotif[] {
   return embroideryMotifs.filter((m) => m.tier === "botanical");
+}
+
+export function getWordMotifs(): EmbroideryMotif[] {
+  return embroideryMotifs.filter((m) => m.tier === "word");
 }
 
 /** 公仔繡喺實物上面嘅示範組合 */
